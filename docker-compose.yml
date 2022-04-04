@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+    localstack:
+        image: localstack/localstack:latest
+        environment:
+            - DEBUG=1
+            - SERVICES=dynamodb
+            - HOSTNAME_EXTERNAL=localstack
+            - HOSTNAME=localstack
+        ports:
+            - "4566:4566"  
+        expose: 
+            - "4566"          
+    # app:
+    #     image: golang:1.16-alpine
+    #     working_dir: /app
+    #     command: go run cmd/main.go --migrations example/migrations
+    #     environment:
+    #         - AWS_MOCK_SERVER_ADDRESS=http://localstack:4566
+    #         - AWS_ACCESS_KEY_ID=AKIAXUGRP2JDKKAQQ2N7
+    #         - AWS_SECRET_ACCESS_KEY=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
+    #         - AWS_REGION=us-east-1
+    #     volumes:
+    #         - ./:/app
+    #     depends_on:
+    #         - localstack

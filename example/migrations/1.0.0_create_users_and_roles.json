@@ -1,0 +1,67 @@
+[
+    {
+        "table_name": "users",
+        "schema": [
+            {
+                "attribute_definitions": [
+                    {
+                        "name": "id",
+                        "type": "S"
+                    }
+                ],
+                "key_schema": [
+                    {
+                        "name": "id",
+                        "type": "HASH"
+                    }
+                ]
+            }
+        ],
+        "data": [
+            {
+                "id": "1",
+                "username": "test1",
+                "email": "test1@email.com"
+            },
+            {
+                "id": "2",
+                "username": "test2",
+                "email": "test2@email.com"
+            },
+            {
+                "id": "3",
+                "username": "test3",
+                "email": "test3@email.com"
+            }
+        ]
+    },
+    {
+        "table_name": "roles",
+        "schema": [
+            {
+                "attribute_definitions": [
+                    {
+                        "name": "id",
+                        "type": "S"
+                    }
+                ],
+                "key_schema": [
+                    {
+                        "name": "id",
+                        "type": "HASH"
+                    }
+                ]
+            }
+        ],
+        "data": [
+            {
+                "id": "1",
+                "name": "role1"
+            },
+            {
+                "id": "2",
+                "name": "role2"
+            }
+        ]
+    }
+]
